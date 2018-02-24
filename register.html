@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Info</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="jumbotron">
+                    <h2>CarPooling</h2>
+                    <p>Save money. Meet new people. Explore.</p>
+                </div>
+                <nav class="navbar navbar-inverse" id="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#"></a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="browse.html">Browse</a></li>
+                            <li><a href="#">Register trip</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4" id="col_info" style="align-content: center">
+                    <h3>Information about you</h3>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="dep">Departure</label>
+                        <input type="text" class="form-control" id="dep">
+                    </div>
+                    <div class="form-group">
+                        <label for="arr">Arrival</label>
+                        <input type="text" class="form-control" id="arr">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="car">Car type</label>
+                        <input type="text" class="form-control" id="car">
+                    </div>
+                </div>
+                <div class="col-md-7" id="col_infoArea">
+                    <div class="form-group">
+                        <h3>Details about your trip</h3>
+                        <textarea class="form-control" rows="7" id="msg"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </body>
+</html>

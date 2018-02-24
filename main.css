@@ -1,0 +1,395 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.center {
+    text-align:center;
+}
+
+#map {
+    height: 50%;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.jumbotron {
+    background-color: #ff651a;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0px;
+    height: 25%;
+}
+
+.jumbotron #heading_text {
+    margin-bottom: 100px;
+}
+
+#banner {
+    background-color: #ff651a;
+    color: whitesmoke;
+    text-align: center;
+}
+#header {
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+#pigImg{
+    height: 120px;
+    width: 120px;
+}
+
+#meetImg{
+    height: 120px;
+    width: 120px;
+}
+
+#exploreImg{
+    height: 120px;
+    width: 120px;
+}
+
+#feideLogo {
+    height: 33px;
+    width: 30px;
+    margin-top: 7px;
+}
+
+#uiaLogo {
+    height: 30px;
+    width: 30px;
+}
+
+#imgRow{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.img-center {
+    margin:0 auto;
+}
+
+#loginRow {
+    margin-top: 60px;
+}
+
+#loginRow2 {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+
+/*#loginCol {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+
+#login1 {
+    margin-left: 20%;
+}
+
+
+
+#login2 {
+    margin: 0 auto;
+    float: none;
+}
+
+.center-block {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login-username {
+    width: 150px;
+
+}
+#username {
+    width: 170px;
+    margin-bottom: 1px;
+
+}
+
+#login-password {
+    width: 150px;
+}
+
+#password {
+    width: 150px;
+}
+
+#loginUser{
+    margin: auto;
+    height: 70%;
+    width: 190px;
+}
+
+#loginPassword{
+    margin: auto;
+    height: 70%;
+    width: 190px;
+}
+
+#loginUser2 {
+    margin: auto;
+}
+
+#test {
+    margin: auto;
+}
+
+
+#enterBtn {
+    margin-top: 1px;
+    height: 70%;
+    width: 190px;
+    /*text-align: center;*/
+}
+
+#navbar {
+    margin-bottom: 0px;
+}
+
+#navbarField {
+    height: 10px;
+}
+
+#departure {
+    margin-top: 11px;
+    margin-bottom: 1px;
+    margin-left: 6px;
+    width: 160px;
+    height: 28px;
+}
+
+#arrival {
+    margin-top: 11px;
+    margin-bottom: 1px;
+    margin-left: 6px;
+    width: 160px;
+    height: 28px;
+}
+
+#date_navbar {
+    margin-top: 11px;
+    margin-bottom: 1px;
+    margin-left: 6px;
+    width: 160px;
+    height: 28px;
+}
+
+#date_navbar2 {
+    margin-top: 11px;
+    margin-bottom: 1px;
+    margin-left: 6px;
+    width: 160px;
+    height: 28px;
+}
+
+#search {
+    margin-top: 4px;
+    width: 160px;
+    height: 28px;
+}
+
+#searchBtn {
+    margin-top: 4px;
+    height: 28px;
+}
+
+#searchBtn1 {
+    margin-top: 11px;
+    margin-left: 6px;
+    height: 28px;
+}
+
+#carouselContainer {
+    align-content: center;
+    margin-top: 2px;
+}
+
+#myCarousel {
+    width: 50%;
+}
+
+#slider {
+
+    height: 340px;
+    width: 100%;
+    margin: 1px;
+    /*margin-left: 25%;*/
+}
+
+#slide_1text {
+    color: black;
+    margin-left: 150px;
+    height: 90%;
+}
+
+#slide_1 {
+    height: 100%;
+    width: 100%;
+}
+
+#email {
+    width: 60%;
+}
+
+#msg {
+    width: 80%;
+}
+
+#name {
+    width: 70%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#arr {
+    width: 70%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#car {
+    width: 50%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#dep {
+    width: 70%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#date {
+    width: 60%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#col_email {
+    margin-top: 0px;
+}
+
+.registerHead {
+    text-align: center;
+}
+
+/*  CSS for modals  */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 370px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#regInfo.form-group {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#col_info {
+    font-size: 12px;
+}
+
+#nameLabel {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#depLabel {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#arrLabel {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#dateLabel {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#carLabel {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#successImg {
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+
+#success2Img {
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+
+#regFinishedMsg {
+    font-weight: bold;
+    font-size: medium;
+}
+#msgSent{
+    font-weight: bold;
+    font-size: medium;
+}
+
+
+#col_infoArea {
+    margin-top: -2px;
+    margin-right: -1px;
+}
+
+#msgBtn {
+    margin-top: 3px;
+}
+
+#warning {
+    margin-right: 180px;
+    color: #ff651a;
+}
+

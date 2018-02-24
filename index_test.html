@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row" id="banner">
+                <h1 id="header">CarPooling</h1>
+                <p>Save, find, explore!</p>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-inverse" id="navbar">
+                    <div class="container-fluid">
+                        <div class="navbar-header" id="navbarField">
+                            <a class="navbar-brand" href="#"></a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index_test.html">Home</a></li>
+                            <li><input class="form-control" id="departure" placeholder="Departure"  name="departure"> </li>
+                            <li><input class="form-control" id="arrival" placeholder="Arrival"  name="arrival"></li>
+                            <li><input type="date" class="form-control" id="date_navbar" placeholder="From"></li>
+                            <li>
+                                <button class="btn btn-default" type="submit" id="searchBtn1">
+                                    <i class="glyphicon glyphicon-search" style="align-content: center"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                        </ul>
+                        <!-- *** uncomment to add general search field  to nav bar ***
+                        <ul class="nav navbar-right">
+                            div class="input-group">
+                                <input type="text" class="form-control" id="search" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" id="searchBtn">
+                                        <i class="glyphicon glyphicon-search" style="align-content: center"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </ul>-->
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div class="registerHead"><h3>Going on a trip?</h3></div>
+        <div style="text-align: center">
+            <button type="button" class="btn btn-success" id="regBtn">Register!</button>
+        </div>
+        <!-- Modal for registration of a new trip -->
+        <div id="regModal" class="modal">
+            <div class="modal-content" style="overflow-x: hidden" style="overflow-y: scroll">
+                <span class="close" id="closeReg">&times;</span>
+                <div class="container-fluid" id="regInfo">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5" id="col_info" style="align-content: center">
+                            <div class="form-group">
+                                <label for="name" id="nameLabel">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="dep" id="depLabel">Departure</label>
+                                <input type="text" class="form-control" id="dep">
+                            </div>
+                            <div class="form-group">
+                                <label for="arr" id="arrLabel">Arrival</label>
+                                <input type="text" class="form-control" id="arr">
+                            </div>
+                            <div class="form-group">
+                                <label for="date" id="dateLabel">Date</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="car" id="carLabel">Car type</label>
+                                <input type="text" class="form-control" id="car">
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="col_infoArea">
+                            <p>Please fill in the form and add additional information
+                                about you and your trip in the field below.</p>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="7" id="msg"></textarea>
+                            </div>
+                            <button class="btn btn-primary" id="regFinishedBtn">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for showing that registration is complete -->
+        <div id="regFinishedModal" class="modal">
+            <div class="modal-content" style="overflow-x: hidden" style="overflow-y: scroll">
+                <span class="close" id="closeFinished">&times;</span>
+                <img src="success2.png" id="successImg" class="img-responsive img-center">
+                <p class="text-success" id="regFinishedMsg" align="center">Registration complete!</p>
+            </div>
+        </div>
+        <!-- Modal for showing that message has been sent -->
+        <div id="msgSentModal" class="modal">
+            <div class="modal-content" style="overflow-x: hidden" style="overflow-y: scroll">
+                <span class="close" id="closeMsgSent">&times;</span>
+                <img src="success2.png" id="success2Img" class="img-responsive img-center">
+                <p class="text-success" id="msgSent" align="center">Your message has been sent!</p>
+            </div>
+        </div>
+        <!-- Modal for browsing registered trips -->
+        <div id="browseModal" class="modal">
+            <div class="modal-content" style="overflow-x: hidden" style="overflow-y: scroll">
+                <span class="close" id="closeBrowse">&times;</span>
+                <div class="container">
+                    <h2>Registered trips</h2>
+                    <p>Find out if anyone is going the same direction as you!</p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Car type</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Kristiansand</td>
+                                <td>Oslo</td>
+                                <td>20.12.2017</td>
+                                <td>Tommy Riska</td>
+                                <td>VW Golf</td>
+                                <td><button type="button" class="btn btn-success" id="infoBtn1">More info</button></td>
+                            </tr>
+                            <tr>
+                                <td>Grimstad</td>
+                                <td>Stavanger</td>
+                                <td>23.12.2017</td>
+                                <td>Test Testesen</td>
+                                <td>Honda Accord</td>
+                                <td><button type="button" class="btn btn-success" id="infoBtn2">More info</button></td>
+                            </tr>
+                            <tr>
+                                <td>Grimstad</td>
+                                <td>Skien</td>
+                                <td>17.12.2017</td>
+                                <td>Testa Testasen</td>
+                                <td>BWM 323i</td>
+                                <td><button type="button" class="btn btn-success" id="infoBtn3">More info</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for trip info -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content" style="overflow-x: hidden" style="overflow-y: scroll">
+                <span class="close" id="closeInfo">&times;</span>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5" id="col_infoTrip">
+                            <h3>Driving home for christmas!</h3>
+                            <p>Hi. My name is Tommy and I'm planning
+                            on going home for christmas (Oslo). I'm
+                            driving my own car, and would like to
+                            have someone to share the trip with. I will
+                            be able to drive you all the way to the door.
+                            Send me a message! :)
+                            NB! I like all kinds of music. </p>
+                        </div>
+                        <div class="col-md-7" id="col_email">
+                            <div class="form-group has-feedback" id="msgForm">
+                                <label for="email">E-mail</label>
+                                <input type="text" class="form-control" id="email" required>
+                                <span class="glyphicon glyphicon-warning-sign form-control-feedback" id="warning"></span>
+                                <label for="msg">Message</label>
+                                <textarea class="form-control" rows="7" id="message"></textarea>
+                            </div>
+                            <div id="msgBtn">
+                                <button class="btn btn-primary" type="submit" id="sendBtn">Send</button>
+                                <a href="#" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-print"></span> Print
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABQ13CiA-Q9cJj7B5kPHH_MhOD3hxOmZI&callback=initMap"
+                async defer></script>
+        <script src="map.js"></script>
+        <script src="main.js"></script>
+        <script src="db_connection.js"></script>
+    </body>
+</html>
